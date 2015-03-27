@@ -1,0 +1,20 @@
+<div class="container">
+  <!-- Post input -->
+  <form role="form">
+    <div class="row">
+      <div class="input-group">
+        <input type="text" ng-model="post.title" placeholder="Share Something ;)" class="form-control">
+        <span class="input-group-btn">
+          <button class="btn btn-primary" value="Add" ng-click="addPost()">Add</button>
+        </span>
+      </div>
+    </div>
+    <h2>All Posts</h2>
+    <!-- Posts list -->
+    <p class="form-group clear top" ng-repeat="post in posts">
+      <a href="#" ui-sref="show({id: post.id})">{{post.title}}</a>
+      <button class="btn btn-success right" value="Add" id="{{post.id}}" ng-click="editPost(post.id)" ui-sref="edit({id: post.id})">Edit</button>
+      <button class="btn btn-danger right" value="Add" id="{{post.id}}" ng-click="deletePost(post.id)">Delete</button>
+    </p>
+  </form>
+</div>
