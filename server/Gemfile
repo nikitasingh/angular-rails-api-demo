@@ -9,7 +9,7 @@ gem 'acts-as-taggable-on', '~> 3.4'
 gem 'spring', :group => :development
 gem 'rack-cors', :require => 'rack/cors'
 
-gem 'sqlite3'
+gem 'pg'
 
 gem 'active_model_serializers','0.8.1'
 
