@@ -9,12 +9,25 @@
         </span>
       </div>
     </div>
-    <h2>All Posts</h2>
-    <!-- Posts list -->
-    <p class="form-group clear top" ng-repeat="post in posts">
-      <a href="#" ui-sref="show({id: post.id})">{{post.title}}</a>
-      <button class="btn btn-success right" value="Add" id="{{post.id}}" ng-click="editPost(post.id)" ui-sref="edit({id: post.id})">Edit</button>
-      <button class="btn btn-danger right" value="Add" id="{{post.id}}" ng-click="deletePost(post.id)">Delete</button>
-    </p>
+    <div class="table-responsive">
+      <div>
+        </div><table class="table">
+      <tbody><tr>
+        <th>Title</th>
+        <th>Comments</th>
+        <th>Rating</th>
+        <th></th>
+      </tr>
+      <!-- ngRepeat: post in posts -->
+      <tr ng-repeat="post in posts" class="ng-scope">
+          <td><a href="#" ui-sref="show({id: post.id})">{{post.title}}</a></td>
+          <td>{{post.comments.length}}</td>
+          <td><div rating score="post.average_score" max="5" class="pull-left" post="post"></div></td>
+          <td>
+          <button class="btn btn-success" value="Add" id="{{post.id}}" ng-click="editPost(post.id)" ui-sref="edit({id: post.id})"><i class="fa fa-edit"></i></button>
+          <button class="btn btn-danger" value="Add" id="{{post.id}}" ng-click="deletePost(post.id)"><i class="fa fa-times"></i>
+          </button>
+          </td>
+      </tr>
   </form>
 </div>

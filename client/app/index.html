@@ -12,30 +12,32 @@
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/rating.css">
+    <link rel="stylesheet" href="styles/tag.css">
+    <link rel="stylesheet" href="styles/font-awesome/css/font-awesome.min.css">
     <!-- endbuild -->
   </head>
   <body>
+    
     <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
     <!-- Add your site or application content here -->
-    <div class="container">
-      <div class="header">
-      <button class="btn btn-success right" value="Add" ui-sref="posts">Home</button>
-        <h3 class="text-muted">Share Your Findings</h3>
-      </div>
+
+      <header class="header">
+      <button href="#/" class="btn btn-success right" value="Add" ui-sref="posts"><i class="fa fa-home"></i>Home </button>
+        <h3 class="text-white"><i class="fa fa-share-alt"></i>   <b>Share Your Findings</b></h3>
+      </header>
 
       <!-- <div ng-include="'views/main.html'" ></div> -->
-      <div ui-view></div>
-      <div class="footer">
-        <p><span class="glyphicon glyphicon-heart"></span> </p>
-      </div>
+    <div class="container">
+      <!-- uiView:  --><div class="ng-scope" ui-view=""></div>
     </div>
 
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
-     <script>
+     <script src="//www.google-analytics.com/analytics.js" async=""></script><script>
        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -82,7 +84,12 @@
         <script src="scripts/controllers/post/postedit.js"></script>
         <script src="scripts/services/post.js"></script>
         <script src="scripts/services/comment.js"></script>
+        <script src="scripts/directives/tags-autocomplete.js"></script>
+        <script src="scripts/directives/rating.js"></script>
         
         <!-- endbuild -->
+
+
+
 </body>
 </html>

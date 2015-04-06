@@ -10,6 +10,7 @@ app.controller('PostEditCtrl', function ($scope,Post,Comment,$stateParams,$state
     $scope.post = {};
     Post.show($stateParams.id).then(function(data) {
       $scope.post = data;
+      $scope.post.tag_list = _.pluck(data.tags, 'name');
     });
 
     $scope.updatePost = function(id){

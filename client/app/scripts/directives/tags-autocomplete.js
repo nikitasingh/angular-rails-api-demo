@@ -13,7 +13,6 @@
 			scope.selectedTags =  [];
 			scope.search=function(){
 	     $http.get(attrs.url+'?term='+scope.searchText).success(function(data){
-	     	console.log(scope.post);
 	         if(data.indexOf(scope.searchText)===-1){
 	             data.unshift(scope.searchText);
 	         }

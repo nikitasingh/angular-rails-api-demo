@@ -4,9 +4,7 @@ app.directive("rating", function(Post) {
     scope:{
             score: '=score',
     				max: '=max',
-    				enable: '=enable',
-    				post_object:'=post',
-    				test: '=test'
+    				post_object:'=post'
         },
     templateUrl:'/views/rating.html',
 

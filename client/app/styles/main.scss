@@ -12,7 +12,6 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/vendor/assets/font
 
 /* Space out content a bit */
 body {
-  padding-top: 20px;
   padding-bottom: 20px;
 }
 
@@ -20,20 +19,20 @@ body {
 .header,
 .marketing,
 .footer {
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: 21px;
+  padding-right: 21px;
+  padding-top: 11px;
 }
 
 /* Custom page header */
 .header {
-  border-bottom: 1px solid #e5e5e5;
+  background: none repeat scroll 0 0 #6f5499;
 
   /* Make the masthead heading the same height as the navigation */
   h3 {
     margin-top: 0;
     margin-bottom: 0;
     line-height: 40px;
-    padding-bottom: 19px;
   }
 }
 
@@ -70,7 +69,6 @@ body {
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
   .container {
-    max-width: 730px;
     min-height: 400px;
   }
 
@@ -78,8 +76,6 @@ body {
   .header,
   .marketing,
   .footer {
-    padding-left: 0;
-    padding-right: 0;
   }
   /* Space out the masthead */
   .header {
@@ -100,6 +96,11 @@ body {
   clear: both;
 }
 
-.top{
+.text-white{
+color: #fff;
   
+}
+
+.form-group {
+    margin-bottom: 20px;
 }

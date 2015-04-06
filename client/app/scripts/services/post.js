@@ -8,7 +8,7 @@ app.service('Post', function Post(Restangular) {
     }
 
     this.create = function(params){
-    	return baseUrl.post({posts: params})
+    	return baseUrl.post({posts: params});
     }
 
     this.delete = function(id){
@@ -22,6 +22,10 @@ app.service('Post', function Post(Restangular) {
 
     this.show = function(id){
       return Restangular.one('api/v1/posts',id).get();
+    }
+
+    this.addRating = function(post){
+      return Restangular.all('api/v1/posts/add_rating').post({posts: post});
     }
 
   });
