@@ -17,13 +17,12 @@ Rails.application.routes.draw do
         resources :posts do
           member do
             post 'add_comment'
+            
           end
+          get 'get_tag_list', on: :collection
+          post 'add_rating', on: :collection
         end
         resources :comments do
-          member do
-            # post 'add_comment'
-            post 'get_comments'
-          end
         end
       end
     end
