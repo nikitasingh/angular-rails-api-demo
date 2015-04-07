@@ -50,6 +50,8 @@ body {
 /* Main marketing message and sign up button */
 .jumbotron {
   border-bottom: 1px solid #e5e5e5;
+  padding-left: 60px;
+  padding-right: 60px;
 
   .btn {
     font-size: 21px;
@@ -103,4 +105,8 @@ color: #fff;
 
 .form-group {
     margin-bottom: 20px;
+}
+
+.row{
+  margin-botttom: 15px;
 }
