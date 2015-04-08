@@ -10,7 +10,7 @@ gem 'spring', :group => :development
 gem 'rack-cors', :require => 'rack/cors'
 
 gem 'pg'
-
+gem 'sqlite3', :group => :development
 gem 'active_model_serializers','0.8.1'
 
 # To use ActiveModel has_secure_password
